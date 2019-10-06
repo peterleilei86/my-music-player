@@ -1,4 +1,5 @@
-platform :ios, '9.0'
+ENV['SWIFT_VERSION'] = '5'
+platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
 target 'myMusicPlayer' do
@@ -34,6 +35,8 @@ target 'myMusicPlayer' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-track-player', :path => '../node_modules/react-native-track-player'
+
   target 'myMusicPlayerTests' do
     inherit! :search_paths
     # Pods for testing
@@ -50,4 +53,14 @@ target 'myMusicPlayer-tvOS' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['react-native-track-player'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '5'
+      end
+    end
+  end
 end

@@ -19,6 +19,7 @@
 		518BE56496F6E1408E5B41C6 /* libPods-myMusicPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A571D40D9334617E66A187DE /* libPods-myMusicPlayerTests.a */; };
 		91A51EC1C77B63DC481BEA5E /* libPods-myMusicPlayer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535D0C91093E83DE2D073AE /* libPods-myMusicPlayer-tvOSTests.a */; };
 		9CAEBCCAA93D39535D07DFA6 /* libPods-myMusicPlayer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCF0CE55AD0C08D47FB5766 /* libPods-myMusicPlayer-tvOS.a */; };
+		D02C5BA623493DA900426251 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02C5BA523493DA900426251 /* dummy.swift */; };
 		DEC556286DE98B78D6708927 /* libPods-myMusicPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB4AE621B216A3B5AA1E86 /* libPods-myMusicPlayer.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		A571D40D9334617E66A187DE /* libPods-myMusicPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myMusicPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83DCFB28968F25FE6298BB7 /* Pods-myMusicPlayer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMusicPlayer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-myMusicPlayer-tvOSTests/Pods-myMusicPlayer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF3F02CA46AA675AF003EB36 /* Pods-myMusicPlayer-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMusicPlayer-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-myMusicPlayer-tvOS/Pods-myMusicPlayer-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D02C5BA523493DA900426251 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		D157AE97FAC7A07DC5D13733 /* Pods-myMusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMusicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-myMusicPlayer/Pods-myMusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F5ECC0CE2106DF9F452B3F /* Pods-myMusicPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myMusicPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-myMusicPlayerTests/Pods-myMusicPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECCF0CE55AD0C08D47FB5766 /* libPods-myMusicPlayer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myMusicPlayer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				D02C5BA523493DA900426251 /* dummy.swift */,
 			);
 			name = myMusicPlayer;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -508,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				D02C5BA623493DA900426251 /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3115680372C74597A35B3B8E /* Pods-myMusicPlayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = T88NXZAGAZ;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -568,7 +574,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = myMusicPlayerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -585,11 +591,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3F5ECC0CE2106DF9F452B3F /* Pods-myMusicPlayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = T88NXZAGAZ;
 				INFOPLIST_FILE = myMusicPlayerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -611,6 +618,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = T88NXZAGAZ;
 				INFOPLIST_FILE = myMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -619,6 +627,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = myMusicPlayer;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -631,6 +640,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T88NXZAGAZ;
 				INFOPLIST_FILE = myMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -639,6 +649,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = myMusicPlayer;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
